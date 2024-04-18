@@ -1,1 +1,9 @@
-<p>getbyid works!</p>
+<input type="number" class="form-control" [(ngModel)]="myId" (onChange)="getByid()">
+
+
+<button class="btn btn-success" (click)="getByid()">Find User</button>
+
+<h1>Id: {{user.userId}}</h1>
+<h1>FullName: {{user.fullName}}</h1>
+<h1>Email: {{user.email}}</h1>
+<h1>Role: {{user.role}}</h1>

@@ -1,1 +1,13 @@
-<p>deleteuser works!</p>
+<div class="submit-form">
+    @if(!isDeleted){
+        <input type="number" class="form-control" [(ngModel)]="myId">
+
+
+
+        <button class="btn btn-danger" (click)="delete()">Delete User</button>
+
+
+    } @else {
+        <h1>Ma'lumotlar muvaffaqiyatli o'chirildi</h1>
+    }
+</div>

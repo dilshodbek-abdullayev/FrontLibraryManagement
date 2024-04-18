@@ -1,10 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UserModel } from '../../models/user-model';
+import { CrudService } from '../../services/crud.service';
 
 @Component({
   selector: 'app-getall',
   templateUrl: './getall.component.html',
   styleUrl: './getall.component.scss'
 })
-export class GetallComponent {
 
-}
+export class GetallComponent implements OnInit {
+  users!:UserModel[];
+  constructor(private crudService:CrudService){}
+  
+  ngOnInit(): void {
+    this.getAllUsers();
+  }
+  getAllUsers(){
+    this.crudService.getAll().subscribe({
+      next: (data)=>{
+        this.users = data;
+        console.log(data);
+      },
+      error: (err)=>{
+        console.log(err);
+      }
+    })
+  }
+  
+  }

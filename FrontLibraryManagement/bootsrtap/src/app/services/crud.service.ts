@@ -14,14 +14,14 @@ export interface Message{
 
 export class CrudService {
 
-  baseUrl:string="https://localhost:7189/api/User";
+  baseUrl:string="https://localhost:7189/api/User/";
   constructor(private http:HttpClient) { }
 
-  getAll():Observable<UserModel[]>{
-    return this.http.get<UserModel[]>(this.baseUrl + 'GetAll')
+  getAll(): Observable<UserModel[]>{
+    return this.http.get<UserModel[]>(this.baseUrl+'GetAll')
   }
-  createUser(data:CreateUser):Observable<Message>{
-    return this.http.post<Message>(this.baseUrl+'CreateUser',data)
+  createUser(data: CreateUser):Observable<Message>{
+    return this.http.post<Message>(this.baseUrl+'CreateUser', data)
   }
   getById(id:number):Observable<UserModel> {
     return this.http.get<UserModel>(this.baseUrl+`GetByUserId?id=${id}`)
