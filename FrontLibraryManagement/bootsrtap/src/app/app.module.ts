@@ -3,12 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CreateComponent } from './create/create.component';
-import { DeleteuserComponent } from './deleteuser/deleteuser.component';
-import { GetallComponent } from './getall/getall.component';
-import { GetbyidComponent } from './getbyid/getbyid.component';
-import { UpdateuserComponent } from './updateuser/updateuser.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { CreateComponent } from './companent/create/create.component';
+import { DeleteuserComponent } from './companent/deleteuser/deleteuser.component';
+import { GetallComponent } from './companent/getall/getall.component';
+import { GetbyidComponent } from './companent/getbyid/getbyid.component';
+import { NavbarComponent } from './companent/navbar/navbar.component';
+import { UpdateuserComponent } from './companent/updateuser/updateuser.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,16 @@ import { NavbarComponent } from './navbar/navbar.component';
     DeleteuserComponent,
     GetallComponent,
     GetbyidComponent,
+    NavbarComponent,
     UpdateuserComponent,
-    NavbarComponent
+ 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
