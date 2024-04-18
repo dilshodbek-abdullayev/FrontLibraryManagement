@@ -4,13 +4,14 @@ import { Observable } from 'rxjs';
 import { UserModel } from '../models/user-model';
 import { CreateUser } from '../models/create-user';
 
+export interface Message{
+  fullName:string,
+}
+
 @Injectable({
   providedIn: 'root'
 })
 
-export interface Message{
-  fullName:string,
-}
 export class CrudService {
 
   baseUrl:string="https://localhost:7189/api/User";
