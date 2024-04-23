@@ -26,5 +26,5 @@ export class GetallComponent implements OnInit {
       }
     })
   }
-  
+
   }

@@ -1,0 +1,35 @@
+
+@if(!isUpdated){
+    <button  mat-flat-button id="id" placeholder="enter ID" [(ngModel)]="myId" name="id"color="primary">Find User</button>
+    <br>
+    <mat-form-field>
+        <mat-label>Id</mat-label>
+        <input matInput [(ngModel)]="myId">
+
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>FullName</mat-label>
+        <input matInput id="name" placeholder="enter name" value="{{user.fullName}}" [(ngModel)]="setValue.fullName" name="name">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput id="email" placeholder="Enter email" value="{{user.email}}" [(ngModel)]="setValue.email" name="email">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Login</mat-label>
+        <input matInput [(ngModel)]="setValue.login">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input type="password" matInput id="login" placeholder="enter login" required value="{{setValue.login}}" [(ngModel)]="setValue.login" name="login">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Role</mat-label>
+        <input matInput id="role" placeholder="enter role" required value="{{user.role}}" [(ngModel)]="setValue.role" name="role">
+    </mat-form-field>
+    <button type="submit" mat-flat-button (click)="setUser()" color="primary">Submit</button>
+
+}
+@else{
+    <h1>Malumotlar yangilandi</h1>
+}

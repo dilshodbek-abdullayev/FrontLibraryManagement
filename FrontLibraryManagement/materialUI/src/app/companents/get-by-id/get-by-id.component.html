@@ -1,0 +1,11 @@
+<mat-form-field>
+    <mat-label>FullName</mat-label>
+    <input type="number" matInput [(ngModel)]="myId">
+</mat-form-field>
+<br>
+<button type="submit" mat-flat-button (click)="getByid()" color="primary">Submit</button>
+<br>
+<h1>Id: {{user.userId}}</h1>
+<h1>FullName: {{user.fullName}}</h1>
+<h1>Email: {{user.email}}</h1>
+<h1>Role: {{user.role}}</h1>
